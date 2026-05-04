@@ -1,0 +1,97 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'vazir';
+  src: url(../../assets/fonts/vazir/Vazir-Regular.woff2);
+}
+
+:root {
+  --bg: #ffffff;
+  --bg-dark: #171717;
+}
+
+body {
+  font-family: 'vazir';
+}
+
+/* .head_banner {
+  background-image: url('../../assets/images/head_banner.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.embla {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  justify-content: center;
+  position: relative;
+}
+
+.embla__container {
+  display: flex;
+  will-change: transform;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.embla__slide > * {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.embla__controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.embla__prev,
+.embla__next {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 100%;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.embla__prev:disabled,
+.embla__next:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.embla_offers {
+  overflow: hidden;
+  box-sizing: border-box;
+  justify-content: center;
+  position: relative;
+}
+
+.embla_container_offers {
+  display: flex;
+  gap: 55px;
+  will-change: transform;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.embla_slide_offers {
+  flex: 0 0 15%;
+}
+
+.img-category {
+  position: inherit;
+}

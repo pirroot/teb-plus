@@ -1,0 +1,252 @@
+{
+  "categories": [
+    {
+      "id": "342123",
+      "name": "لباس مانتو",
+      "slug": "",
+      "description": "",
+      "image": "https://dkstatics-public.digikala.com/digikala-products/3ac7f84fd92ff769230c65fa6a044b7704cdb774_1746946220.jpg",
+      "is_deleted": false,
+      "is_active": false
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "id_product": "133-321jf-32",
+      "name": "مانتو کتی ژاکارد M31884",
+      "slug": "m-12223423431",
+      "description": "ا به دنبال مانتویی هستید که همزمان هم رسمیت یک کت را داشته باشد و هم راحتی یک مانتو روزمره؟ مانتو کتی ژاکارد مدل M31884 دقیقاً همان چیزی است که شما نیاز دارید. این محصول با الهام از طراحی‌های کلاسیک و اجرایی مدرن، به شما این امکان را می‌دهد که در هر موقعیتی، از جلسات کاری گرفته تا دورهمی‌های دوستانه، بدرخشید.",
+      "price": 300000,
+      "images": [
+        "https://persicatheme.ir/lebasino/wp-content/uploads/2025/08/product-8-600x800.jpg",
+        "https://persicatheme.ir/lebasino/wp-content/uploads/2025/08/1484-2-600x800.jpg",
+        "https://persicatheme.ir/lebasino/wp-content/uploads/2025/08/1484-3-600x800.jpg"
+      ],
+      "is_offer": true,
+      "offer_percent": 50,
+      "rating": 0,
+      "size": ["M", "XL", "XL2"],
+      "colors": ["ابی", "قرمز", "سبز"],
+      "features": [
+        {
+          "title": "کاربری",
+          "value": ["روزمره"]
+        },
+        {
+          "title": "نوع پارچه",
+          "value": ["ژاکارد"]
+        },
+        {
+          "title": "رنگ",
+          "value": ["ابی", "قرمز", "سبز"]
+        },
+        {
+          "title": "کاربری",
+          "value": ["روزمره"]
+        }
+      ],
+      "comments": [],
+      "favorites_number": 0,
+      "category": [],
+      "is_active": false,
+      "is_deleted": false
+    },
+    {
+      "id": "12",
+      "id_product": "133-321jf-32",
+      "name": "مانتو کتی ژاکارد M31884",
+      "slug": "m-12223fdsa423431",
+      "description": "ا به دنبال مانتویی هستید که همزمان هم رسمیت یک کت را داشته باشد و هم راحتی یک مانتو روزمره؟ مانتو کتی ژاکارد مدل M31884 دقیقاً همان چیزی است که شما نیاز دارید. این محصول با الهام از طراحی‌های کلاسیک و اجرایی مدرن، به شما این امکان را می‌دهد که در هر موقعیتی، از جلسات کاری گرفته تا دورهمی‌های دوستانه، بدرخشید.",
+      "price": 300000,
+      "images": [
+        "https://dkstatics-public.digikala.com/digikala-products/bfe8d2db8c2081dcd4652224de941f311a6f83be_1753803917.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/2c14c084375cb7fd438230230596f6b5f49a3d03_1725576472.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/dc665edd7897eb44a675318b2e6eec68348a5b51_1748369394.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/95d40ef89b42be0a6364068b3ba5844a0555ec89_1762347190.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/4d3182fe06bc3d955309342303941044879b9840_1763553097.jpg"
+      ],
+      "is_offer": true,
+      "offer_percent": 50,
+      "rating": 0,
+      "size": ["M", "XL", "XL2"],
+      "colors": ["ابی", "قرمز", "سبز"],
+      "comments": [],
+      "favorites_number": 0,
+      "category": [],
+      "is_active": false,
+      "is_deleted": false
+    },
+    {
+      "id": "31",
+      "id_product": "133-321jf-32",
+      "name": "مانتو کتی ژاکارد M31884",
+      "slug": "m-122234132132123431",
+      "description": "ا به دنبال مانتویی هستید که همزمان هم رسمیت یک کت را داشته باشد و هم راحتی یک مانتو روزمره؟ مانتو کتی ژاکارد مدل M31884 دقیقاً همان چیزی است که شما نیاز دارید. این محصول با الهام از طراحی‌های کلاسیک و اجرایی مدرن، به شما این امکان را می‌دهد که در هر موقعیتی، از جلسات کاری گرفته تا دورهمی‌های دوستانه، بدرخشید.",
+      "price": 300000,
+      "images": [
+        "https://dkstatics-public.digikala.com/digikala-products/bfe8d2db8c2081dcd4652224de941f311a6f83be_1753803917.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/2c14c084375cb7fd438230230596f6b5f49a3d03_1725576472.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/dc665edd7897eb44a675318b2e6eec68348a5b51_1748369394.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/95d40ef89b42be0a6364068b3ba5844a0555ec89_1762347190.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/4d3182fe06bc3d955309342303941044879b9840_1763553097.jpg"
+      ],
+      "is_offer": true,
+      "offer_percent": 50,
+      "rating": 0,
+      "size": ["M", "XL", "XL2"],
+      "colors": ["ابی", "قرمز", "سبز"],
+      "comments": [],
+      "favorites_number": 0,
+      "category": [],
+      "is_active": false,
+      "is_deleted": false
+    },
+    {
+      "id": "41",
+      "id_product": "133-321jf-32",
+      "name": "مانتو کتی ژاکارد M31884",
+      "slug": "m23431",
+      "description": "ا به دنبال مانتویی هستید که همزمان هم رسمیت یک کت را داشته باشد و هم راحتی یک مانتو روزمره؟ مانتو کتی ژاکارد مدل M31884 دقیقاً همان چیزی است که شما نیاز دارید. این محصول با الهام از طراحی‌های کلاسیک و اجرایی مدرن، به شما این امکان را می‌دهد که در هر موقعیتی، از جلسات کاری گرفته تا دورهمی‌های دوستانه، بدرخشید.",
+      "price": 300000,
+      "images": [
+        "https://dkstatics-public.digikala.com/digikala-products/bfe8d2db8c2081dcd4652224de941f311a6f83be_1753803917.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/2c14c084375cb7fd438230230596f6b5f49a3d03_1725576472.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/dc665edd7897eb44a675318b2e6eec68348a5b51_1748369394.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/95d40ef89b42be0a6364068b3ba5844a0555ec89_1762347190.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/4d3182fe06bc3d955309342303941044879b9840_1763553097.jpg"
+      ],
+      "is_offer": true,
+      "offer_percent": 50,
+      "rating": 0,
+      "size": ["M", "XL", "XL2"],
+      "colors": ["ابی", "قرمز", "سبز"],
+      "comments": [],
+      "favorites_number": 0,
+      "category": [],
+      "is_active": false,
+      "is_deleted": false
+    },
+    {
+      "id": "51",
+      "id_product": "133-321jf-32",
+      "name": "مانتو کتی ژاکارد M31884",
+      "slug": "dfr",
+      "description": "ا به دنبال مانتویی هستید که همزمان هم رسمیت یک کت را داشته باشد و هم راحتی یک مانتو روزمره؟ مانتو کتی ژاکارد مدل M31884 دقیقاً همان چیزی است که شما نیاز دارید. این محصول با الهام از طراحی‌های کلاسیک و اجرایی مدرن، به شما این امکان را می‌دهد که در هر موقعیتی، از جلسات کاری گرفته تا دورهمی‌های دوستانه، بدرخشید.",
+      "price": 153200000,
+      "images": [
+        "https://dkstatics-public.digikala.com/digikala-products/bfe8d2db8c2081dcd4652224de941f311a6f83be_1753803917.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/2c14c084375cb7fd438230230596f6b5f49a3d03_1725576472.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/dc665edd7897eb44a675318b2e6eec68348a5b51_1748369394.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/95d40ef89b42be0a6364068b3ba5844a0555ec89_1762347190.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/4d3182fe06bc3d955309342303941044879b9840_1763553097.jpg"
+      ],
+      "is_offer": true,
+      "offer_percent": 50,
+      "rating": 0,
+      "size": ["M", "XL", "XL2"],
+      "colors": ["ابی", "قرمز", "سبز"],
+      "comments": [],
+      "favorites_number": 0,
+      "category": [],
+      "is_active": false,
+      "is_deleted": false
+    },
+    {
+      "id": "123",
+      "id_product": "133-321jf-32",
+      "name": "مانتو کتی ژاکارد M31884",
+      "slug": "m-fds",
+      "description": "ا به دنبال مانتویی هستید که همزمان هم رسمیت یک کت را داشته باشد و هم راحتی یک مانتو روزمره؟ مانتو کتی ژاکارد مدل M31884 دقیقاً همان چیزی است که شما نیاز دارید. این محصول با الهام از طراحی‌های کلاسیک و اجرایی مدرن، به شما این امکان را می‌دهد که در هر موقعیتی، از جلسات کاری گرفته تا دورهمی‌های دوستانه، بدرخشید.",
+      "price": 300000,
+      "images": [
+        "https://dkstatics-public.digikala.com/digikala-products/bfe8d2db8c2081dcd4652224de941f311a6f83be_1753803917.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/2c14c084375cb7fd438230230596f6b5f49a3d03_1725576472.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/dc665edd7897eb44a675318b2e6eec68348a5b51_1748369394.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/95d40ef89b42be0a6364068b3ba5844a0555ec89_1762347190.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/4d3182fe06bc3d955309342303941044879b9840_1763553097.jpg"
+      ],
+      "is_offer": true,
+      "offer_percent": 50,
+      "rating": 0,
+      "size": ["M", "XL", "XL2"],
+      "colors": ["ابی", "قرمز", "سبز"],
+      "comments": [],
+      "favorites_number": 0,
+      "category": [],
+      "is_active": false,
+      "is_deleted": false
+    },
+    {
+      "id": "131",
+      "id_product": "133-321jf-32",
+      "name": "مانتو کتی ژاکارد M31884",
+      "slug": "m-54324",
+      "description": "ا به دنبال مانتویی هستید که همزمان هم رسمیت یک کت را داشته باشد و هم راحتی یک مانتو روزمره؟ مانتو کتی ژاکارد مدل M31884 دقیقاً همان چیزی است که شما نیاز دارید. این محصول با الهام از طراحی‌های کلاسیک و اجرایی مدرن، به شما این امکان را می‌دهد که در هر موقعیتی، از جلسات کاری گرفته تا دورهمی‌های دوستانه، بدرخشید.",
+      "images": [
+        "https://dkstatics-public.digikala.com/digikala-products/bfe8d2db8c2081dcd4652224de941f311a6f83be_1753803917.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/2c14c084375cb7fd438230230596f6b5f49a3d03_1725576472.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/dc665edd7897eb44a675318b2e6eec68348a5b51_1748369394.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/95d40ef89b42be0a6364068b3ba5844a0555ec89_1762347190.jpg",
+        "https://dkstatics-public.digikala.com/digikala-products/4d3182fe06bc3d955309342303941044879b9840_1763553097.jpg"
+      ],
+      "price": 300000,
+      "is_offer": true,
+      "offer_percent": 50,
+      "rating": 0,
+      "size": ["M", "XL", "XL2"],
+      "colors": ["ابی", "قرمز", "سبز"],
+      "comments": [],
+      "favorites_number": 0,
+      "category": [],
+      "is_active": false,
+      "is_deleted": false
+    }
+  ],
+  "articles": [
+    {
+      "id": "1qe2312",
+      "title": "محبوب ترین استایل های پاییزه",
+      "slug": "/محبوب-ترین-استایل-های-پایی",
+      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+      "image": "https://digikala.com/mag/wp-content/uploads/2026/03/%D8%B2%D8%A7%D9%85%D9%88%D9%81%DB%8C%D9%84%DB%8C%D8%A7-2.jpg",
+      "date": "1405/4/2",
+      "seen": 21,
+      "is_active": true,
+      "is_deleted": false
+    },
+    {
+      "id": "1qefdsa2312",
+      "title": "محبوب ترین استایل های پاییزه",
+      "slug": "/محبوب-ترین-استایل-های-پایی",
+      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+      "image": "https://digikala.com/mag/wp-content/uploads/2026/03/%D8%B2%D8%A7%D9%85%D9%88%D9%81%DB%8C%D9%84%DB%8C%D8%A7-2.jpg",
+      "date": "1405/4/2",
+      "seen": 21,
+      "is_active": true,
+      "is_deleted": false
+    },
+    {
+      "id": "1qe2432423312",
+      "title": "محبوب ترین استایل های پاییزه",
+      "slug": "/محبوب-ترین-استایل-های-پایی",
+      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+      "image": "https://digikala.com/mag/wp-content/uploads/2026/03/%D8%B2%D8%A7%D9%85%D9%88%D9%81%DB%8C%D9%84%DB%8C%D8%A7-2.jpg",
+      "date": "1405/4/2",
+      "seen": 21,
+      "is_active": true,
+      "is_deleted": false
+    },
+    {
+      "id": "1qe23fdsa12",
+      "title": "محبوب ترین استایل های پاییزه",
+      "slug": "/محبوب-ترین-استایل-های-پایی",
+      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+      "image": "https://digikala.com/mag/wp-content/uploads/2026/03/%D8%B2%D8%A7%D9%85%D9%88%D9%81%DB%8C%D9%84%DB%8C%D8%A7-2.jpg",
+      "date": "1405/4/2",
+      "seen": 21,
+      "is_active": true,
+      "is_deleted": false
+    }
+  ]
+}

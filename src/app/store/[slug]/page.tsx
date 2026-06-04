@@ -1,127 +1,158 @@
 import Image from 'next/image';
-import axios from 'axios';
 import PageRouter from '@/src/components/PageRouter/PageRouter';
 import { IProductDto } from '@/src/types/IProductDto';
 import { IPageRouterDto } from '@/src/types/IPageRouterDto';
-import { toNumberFa } from '@/src/utility/toNumberFa';
+import { toNumberFa } from '@/src/utils/toNumberFa';
 import ProductGallery from '@/src/components/Store/ProductGallery';
-import TomanSvg from '@/assets/svg/toman.svg';
-import { setProductOffer } from '@/src/utility/setProductOffer';
+import TomanSvg from '@/public/svg/toman.svg';
+import { setProductOffer } from '@/src/utils/setProductOffer';
 import BtnAddProduct from '@/src/components/Store/ProductDitail/BtnAddProduct';
 import ProductOrderTracking from '@/src/components/Store/ProductDitail/ProductOrderTracking';
-import {
-  HiOutlineChatBubbleLeftEllipsis,
-  HiOutlineStar,
-} from 'react-icons/hi2';
+import { HiOutlineChatBubbleLeftEllipsis, HiOutlineStar } from 'react-icons/hi2';
+import { FiPackage, FiTag, FiHash } from 'react-icons/fi';
 
 export default async function ProductDetail(props: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await props.params;
-  const result = await axios(`http://localhost:3001/products/?slug=${slug}`);
-  const product: IProductDto = result.data[0];
+
+  const res = await fetch(`http://localhost:3001/products/?slug=${slug}`, {
+    next: { revalidate: 60 },
+  });
+  const data = await res.json();
+  const product: IProductDto = data[0];
+
+  const finalPrice = product.is_offer
+    ? setProductOffer(product.price, product.offer_percent as number)
+    : product.price;
+
   const routes: IPageRouterDto[] = [
     { link: '/store', title: 'فروشگاه' },
-    { link: slug, title: 'test' },
+    { link: `/store/${slug}`, title: product.name },
   ];
 
   return (
     <>
       <PageRouter routs={routes} />
-      <div className="container mx-auto space-y-10">
-        <div className=" grid grid-cols-12 gap-5">
-          <div className="col-span-9 p-7 bg-white shadow rounded-lg">
-            <div className="grid grid-cols-5 gap-10">
+
+      <div className="container mx-auto px-4 py-8 space-y-8">
+        <div className="grid grid-cols-12 gap-6">
+
+          <div className="col-span-8 bg-white rounded-2xl shadow-sm border border-gray-100 p-6 space-y-8">
+            <div className="grid grid-cols-5 gap-8">
               <div className="col-span-2">
-                <ProductGallery
-                  images={product.images}
-                  alt_title={product.name}
-                />
+                <ProductGallery images={product.images} alt_title={product.name} />
               </div>
-              <div className="col-span-3">
-                <div className="flex justify-between">
-                  <h1 className="text-xl">{product.name}</h1>
-                </div>
-                <p className="text-gray-500 mt-5 text-justify">
-                  شم{product.description}
-                </p>
-                <hr className="text-gray-300 my-10" />
-                <h3 className="text-red-700 mb-3">برخی ویژگی های محصول :</h3>
-                <div className="flex gap-5">
-                  <div className="w-3/4">
-                    <div className="border border-gray-300 p-3 rounded-md grid grid-cols-2 gap-5">
-                      {product.features.map((feature, index) => (
-                        <div key={index} className="col-span-1">
-                          <span className="text-gray-900 font-black text-sm">
-                            {feature.title}
-                            {' : '}
-                          </span>
-                          <span className="text-gray-500">
-                            {feature.value.join(', ')}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
+
+              <div className="col-span-3 flex flex-col gap-5 text-right">
+                <div>
+                  <h1 className="text-xl font-bold text-gray-900 leading-8">
+                    {product.name}
+                  </h1>
+                  <div className="flex items-center gap-4 mt-3">
+                    <span className="flex items-center gap-1.5 text-sm text-gray-500">
+                      <HiOutlineStar size={16} className="text-amber-400" />
+                      بدون امتیاز
+                    </span>
+                    <span className="w-px h-4 bg-gray-200" />
+                    <span className="flex items-center gap-1.5 text-sm text-gray-500">
+                      <HiOutlineChatBubbleLeftEllipsis size={16} />
+                      ۰ دیدگاه
+                    </span>
                   </div>
-                  <div className="w-1/4 text-gray-800">
-                    <div className="bg-gray-300 rounded-lg text-sm font-thin p-5 space-y-5">
-                      <div className="flex gap-3">
-                        <HiOutlineStar size={22} className="" />
-                        <span className="border-l py-3"></span>
-                        بدون امتیاز
+                </div>
+
+                <p className="text-gray-500 text-sm leading-7 text-justify">
+                  {product.description}
+                </p>
+
+                <hr className="border-gray-100" />
+
+                <div>
+                  <h3 className="text-sm font-bold text-[#c83b3b] mb-3">
+                    ویژگی‌های محصول
+                  </h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    {product.features.map((feature, i) => (
+                      <div
+                        key={i}
+                        className="flex flex-col bg-gray-50 rounded-xl px-4 py-3 border border-gray-100"
+                      >
+                        <span className="text-xs text-gray-400 mb-1">
+                          {feature.title}
+                        </span>
+                        <span className="text-sm font-semibold text-gray-800">
+                          {feature.value.join('، ')}
+                        </span>
                       </div>
-                      <div className="flex gap-3">
-                        <HiOutlineChatBubbleLeftEllipsis size={22} />
-                        <span className="border-l py-3"></span>
-                        دیدگاه 0
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-span-3 p-7 bg-white shadow rounded-lg space-y-5 text-md ">
-            <div className="flex justify-between gap-5 items-center ">
-              <span>شناسه محصول : </span>
-              <span className="text-gray-600">{product.id_product}</span>
+
+          <div className="col-span-4 flex flex-col gap-4">
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 space-y-4 text-right">
+              <MetaRow icon={<FiHash size={15} />} label="شناسه محصول" value={product.id_product} />
+              <MetaRow icon={<FiTag size={15} />} label="دسته‌بندی" value={product.category.name} />
+              <MetaRow icon={<FiPackage size={15} />} label="برند" value={product.model_name} />
             </div>
-            <div className="flex justify-between gap-5 items-center">
-              <span>دسته :</span>
-              <span className="text-gray-600">{product.category.name}</span>
+
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 space-y-4 text-right">
+              {product.is_offer && (
+                <div className="flex items-center justify-between">
+                  <span className="text-xs bg-red-50 text-[#c83b3b] font-bold px-3 py-1 rounded-full">
+                    {toNumberFa(product.offer_percent as number, false)}٪ تخفیف
+                  </span>
+                  <span className="text-sm line-through text-gray-400">
+                    {toNumberFa(product.price)}
+                  </span>
+                </div>
+              )}
+
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-500">قیمت نهایی</span>
+                <span className="flex items-center gap-1.5 text-2xl font-extrabold text-gray-900">
+                  {toNumberFa(finalPrice)}
+                  <Image src={TomanSvg} alt="تومان" width={20} height={20} />
+                </span>
+              </div>
+
+              <BtnAddProduct />
             </div>
-            <div className="flex justify-between gap-5 items-center">
-              <span>برند :</span>
-              <span className="text-gray-600">{product.model_name}</span>
-            </div>
-            <hr className="text-gray-300 my-5" />
-            <h3 className="text-lg flex justify-between">
-              قیمت کل:{' '}
-              <span className="flex gap-2 text-2xl text-red-700 font-bold">
-                {toNumberFa(
-                  product.is_offer
-                    ? setProductOffer(
-                        product.price,
-                        product.offer_percent as number
-                      )
-                    : product.price
-                )}
-                <Image src={TomanSvg} alt="تومان svg" width={20} />
-              </span>
-            </h3>
-            <del className="flex justify-end text-xl text-gray-400">
-              <bdi className="">
-                {product.is_offer && toNumberFa(product.price)}
-              </bdi>
-            </del>
-            <BtnAddProduct />
           </div>
         </div>
+
         <ProductOrderTracking />
-        <div className="col-span-3 p-7 bg-white shadow rounded-lg space-y-5 text-md ">
-          fdsfd
+
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+          <h2 className="text-base font-bold text-gray-800 mb-4">دیدگاه‌ها</h2>
+          <p className="text-sm text-gray-400 text-center py-8">
+            هنوز دیدگاهی ثبت نشده است.
+          </p>
         </div>
       </div>
     </>
+  );
+}
+
+function MetaRow({
+  icon,
+  label,
+  value,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  value: string | number;
+}) {
+  return (
+    <div className="flex items-center justify-between gap-3">
+      <span className="flex items-center gap-1.5 text-sm text-gray-500">
+        <span className="text-[#c83b3b]">{icon}</span>
+        {label}
+      </span>
+      <span className="text-sm font-semibold text-gray-700">{value}</span>
+    </div>
   );
 }

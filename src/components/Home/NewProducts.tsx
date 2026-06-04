@@ -1,25 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import ImageProduct from '@/assets/images/products/produc1.jpg';
-import ImageProduct2 from '@/assets/images/products/p-3-300x400.jpg';
-import ImageProduct3 from '@/assets/images/products/p-5.jpg';
+import ImageProduct from '@/public/images/products/produc1.jpg';
+import ImageProduct2 from '@/public/images/products/p-3-300x400.jpg';
+import ImageProduct3 from '@/public/images/products/p-5.jpg';
 import { IProductCategoryDto, IProductDto } from '@/src/types/IProductDto';
-import { toNumberFa } from '@/src/utility/toNumberFa';
-import TomanSvg from '@/assets/svg/toman.svg';
-import { setProductOffer } from '@/src/utility/setProductOffer';
-import CartSvg from '@/assets/svg/cart shopping.svg';
+import { toNumberFa } from '@/src/utils/toNumberFa';
+import TomanSvg from '@/public/svg/toman.svg';
+import { setProductOffer } from '@/src/utils/setProductOffer';
+import CartSvg from '@/public/svg/cart shopping.svg';
 import { FiArrowLeft } from 'react-icons/fi';
 
-const categories: IProductCategoryDto = {
-  id: '12312',
-  name: 'مانتو',
-  slug: 'monto',
-  description: '',
-  image: ImageProduct,
-  is_deleted: false,
-  Is_active: false,
-  // product: products as IProductDto[],
-};
 
 const products: IProductDto[] = [
   {
@@ -29,7 +19,7 @@ const products: IProductDto[] = [
     slug: 'm-1231',
     description:
       'آیا به دنبال مانتویی هستید که همزمان هم رسمیت یک کت را داشته باشد و هم راحتی یک مانتو روزمره؟ مانتو کتی ژاکارد مدل M31884 دقیقاً همان چیزی است که شما نیاز دارید. این محصول با الهام از طراحی‌های کلاسیک و اجرایی مدرن، به شما این امکان را می‌دهد که در هر موقعیتی، از جلسات کاری گرفته تا دورهمی‌های دوستانه، بدرخشید.',
-    main_image: ImageProduct2,
+    images: ImageProduct2,
     price: 300000,
     is_offer: true,
     offer_percent: 50,
@@ -38,7 +28,6 @@ const products: IProductDto[] = [
     colors: ['زرد', 'قرمز', 'آبی'],
     comments: [],
     favorites_number: 0,
-    category: categories,
     is_active: false,
     is_deleted: false,
   },
@@ -49,7 +38,7 @@ const products: IProductDto[] = [
     slug: 'm-1231',
     description:
       'آیا به دنبال مانتویی هستید که همزمان هم رسمیت یک کت را داشته باشد و هم راحتی یک مانتو روزمره؟ مانتو کتی ژاکارد مدل M31884 دقیقاً همان چیزی است که شما نیاز دارید. این محصول با الهام از طراحی‌های کلاسیک و اجرایی مدرن، به شما این امکان را می‌دهد که در هر موقعیتی، از جلسات کاری گرفته تا دورهمی‌های دوستانه، بدرخشید.',
-    main_image: ImageProduct3,
+    images: ImageProduct3,
     price: 300000,
     is_offer: true,
     offer_percent: 50,
@@ -58,7 +47,6 @@ const products: IProductDto[] = [
     colors: ['زرد', 'قرمز', 'آبی'],
     comments: [],
     favorites_number: 0,
-    category: categories,
     is_active: false,
     is_deleted: false,
   },
@@ -69,7 +57,7 @@ const products: IProductDto[] = [
     slug: 'm-1231',
     description:
       'آیا به دنبال مانتویی هستید که همزمان هم رسمیت یک کت را داشته باشد و هم راحتی یک مانتو روزمره؟ مانتو کتی ژاکارد مدل M31884 دقیقاً همان چیزی است که شما نیاز دارید. این محصول با الهام از طراحی‌های کلاسیک و اجرایی مدرن، به شما این امکان را می‌دهد که در هر موقعیتی، از جلسات کاری گرفته تا دورهمی‌های دوستانه، بدرخشید.',
-    main_image: ImageProduct2,
+    images: ImageProduct2,
     price: 300000,
     is_offer: true,
     offer_percent: 50,
@@ -78,7 +66,6 @@ const products: IProductDto[] = [
     colors: ['زرد', 'قرمز', 'آبی'],
     comments: [],
     favorites_number: 0,
-    category: categories,
     is_active: false,
     is_deleted: false,
   },
@@ -89,7 +76,7 @@ const products: IProductDto[] = [
     slug: 'm-1231',
     description:
       'آیا به دنبال مانتویی هستید که همزمان هم رسمیت یک کت را داشته باشد و هم راحتی یک مانتو روزمره؟ مانتو کتی ژاکارد مدل M31884 دقیقاً همان چیزی است که شما نیاز دارید. این محصول با الهام از طراحی‌های کلاسیک و اجرایی مدرن، به شما این امکان را می‌دهد که در هر موقعیتی، از جلسات کاری گرفته تا دورهمی‌های دوستانه، بدرخشید.',
-    main_image: ImageProduct,
+    images: ImageProduct,
     price: 300000,
     is_offer: true,
     offer_percent: 50,
@@ -98,7 +85,6 @@ const products: IProductDto[] = [
     colors: ['زرد', 'قرمز', 'آبی'],
     comments: [],
     favorites_number: 0,
-    category: categories,
     is_active: false,
     is_deleted: false,
   },
@@ -109,7 +95,7 @@ const products: IProductDto[] = [
     slug: 'm-1231',
     description:
       'آیا به دنبال مانتویی هستید که همزمان هم رسمیت یک کت را داشته باشد و هم راحتی یک مانتو روزمره؟ مانتو کتی ژاکارد مدل M31884 دقیقاً همان چیزی است که شما نیاز دارید. این محصول با الهام از طراحی‌های کلاسیک و اجرایی مدرن، به شما این امکان را می‌دهد که در هر موقعیتی، از جلسات کاری گرفته تا دورهمی‌های دوستانه، بدرخشید.',
-    main_image: ImageProduct2,
+    images: ImageProduct2,
     price: 300000,
     is_offer: true,
     offer_percent: 50,
@@ -118,7 +104,6 @@ const products: IProductDto[] = [
     colors: ['زرد', 'قرمز', 'آبی'],
     comments: [],
     favorites_number: 0,
-    category: categories,
     is_active: false,
     is_deleted: false,
   },
@@ -154,7 +139,7 @@ export default function NewProducts() {
           >
             <Image
               className="rounded-lg group-hover:bg-[#c83b3b] transition-all duration-300"
-              src={product.main_image}
+              src={product.images[0]}
               alt={product.name}
               width={100}
             />

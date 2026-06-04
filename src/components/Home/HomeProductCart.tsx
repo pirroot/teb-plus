@@ -1,14 +1,14 @@
 import Image from 'next/image';
 import { IProductDto } from '@/src/types/IProductDto';
-import { setProductOffer } from '@/src/utility/setProductOffer';
-import { toNumberFa } from '@/src/utility/toNumberFa';
+import { setProductOffer } from '@/src/utils/setProductOffer';
+import { toNumberFa } from '@/src/utils/toNumberFa';
 
-import TomanSvg from '@/assets/svg/toman.svg';
+import TomanSvg from '@/public/svg/toman.svg';
 import Link from 'next/link';
 import { FiShoppingCart } from 'react-icons/fi';
 
 export default function HomeProductCart({
-  main_image,
+  images,
   name,
   price,
   offer_percent,
@@ -28,7 +28,7 @@ export default function HomeProductCart({
         )}
         <Image
           className={'rounded-lg mx-auto'}
-          src={main_image}
+          src={images[0]}
           alt={name}
           width={270}
           height={250}

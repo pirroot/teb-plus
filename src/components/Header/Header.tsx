@@ -3,9 +3,10 @@ import Nav from './Nav';
 
 export default function Header() {
   return (
-    <header className="shadow border-b-2 border-gray-200 shadow-gray-200 bg-white">
-      <MainNav />
-      <Nav />
-    </header>
+    <>
+      <header className="border-b border-gray-200 shadow-sm shadow-gray-200 bg-white">
+        <MainNav />
+      </header>
+      <Nav /></>
   );
 }

@@ -9,16 +9,16 @@ export default async function HomeArticles() {
   ).data;
 
   return (
-    <section className="container mx-auto my-10">
+    <section className="container mx-auto my-10 ">
       <div className="flex justify-between max-md:justify-around pb-10">
         <h3 className="text-2xl">خواندنی‌ها</h3>
       </div>
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid grid-cols-4 max-md:grid-cols-2 gap-5">
         {article.map((article) => (
           <Link
             key={article.id}
             href={`/home/articles/${article.slug}`}
-            className="col-span-1 border-gray-200 rounded-md border-2"
+            className="col-span-1 border-gray-200 rounded-md border-2 hover:scale-95 transition-transform duration-300"
           >
             <Image
               src={article.image}

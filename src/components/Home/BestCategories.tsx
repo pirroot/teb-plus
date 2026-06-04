@@ -1,111 +1,58 @@
-import Image from 'next/image';
-import CatImg1 from '@/assets/images/categories/cat-2.png';
-import CatImg2 from '@/assets/images/categories/cat-3.png';
-import CatImg3 from '@/assets/images/categories/cat-2.png';
-import CatImg4 from '@/assets/images/categories/cat-3.png';
-import CatImg5 from '@/assets/images/categories/cat-2.png';
-import { toNumberFa } from '@/src/utility/toNumberFa';
+import Image, { StaticImageData } from 'next/image';
+import CatImg1 from '@/public/images/categories/cat-2.png';
+import CatImg2 from '@/public/images/categories/cat-3.png';
+import { toNumberFa } from '@/src/utils/toNumberFa';
 import Link from 'next/link';
-import { FiAlignLeft, FiArrowLeft } from 'react-icons/fi';
-import { FaAlignLeft } from 'react-icons/fa';
+import { FiArrowLeft } from 'react-icons/fi';
 
-const list = [
-  {
-    id: 1,
-    title: 'پوشاک مردانه',
-    img: CatImg1,
-    alt: '1',
-    productCount: 24000,
-  },
-  {
-    id: 2,
-    title: 'پوشاک زنانه',
-    img: CatImg2,
-    alt: '2',
+type Category = {
+  id: number;
+  title: string;
+  img: StaticImageData;
+  productCount: number;
+};
 
-    productCount: 4000,
-  },
-  {
-    id: 3,
-    title: 'پوشاک بچگانه',
-    img: CatImg3,
-    alt: '3',
-    productCount: 6000,
-  },
-  {
-    id: 4,
-    title: 'کیف کفش',
-    img: CatImg4,
-    alt: '4',
-    productCount: 4000,
-  },
-
-  {
-    id: 77,
-    title: 'پوشاک مردانه',
-    img: CatImg1,
-    alt: '1',
-    productCount: 24000,
-  },
-  {
-    id: 24324,
-    title: 'پوشاک زنانه',
-    img: CatImg2,
-    alt: '2',
-
-    productCount: 4000,
-  },
-  {
-    id: 3342,
-    title: 'پوشاک بچگانه',
-    img: CatImg3,
-    alt: '3',
-    productCount: 6000,
-  },
-  {
-    id: 445,
-    title: 'کیف کفش',
-    img: CatImg4,
-    alt: '4',
-    productCount: 4000,
-  },
-  {
-    id: 553,
-    title: 'اکسسوری ها',
-    img: CatImg5,
-    alt: '5',
-    productCount: 64000,
-  },
+const list: Category[] = [
+  { id: 1, title: 'پوشاک مردانه', img: CatImg1, productCount: 24000 },
+  { id: 2, title: 'پوشاک زنانه', img: CatImg2, productCount: 4000 },
+  { id: 3, title: 'پوشاک بچگانه', img: CatImg1, productCount: 6000 },
+  { id: 4, title: 'کیف و کفش', img: CatImg2, productCount: 4000 },
+  { id: 77, title: 'پوشاک مردانه', img: CatImg1, productCount: 24000 },
+  { id: 243, title: 'پوشاک زنانه', img: CatImg2, productCount: 4000 },
+  { id: 334, title: 'پوشاک بچگانه', img: CatImg1, productCount: 6000 },
+  { id: 445, title: 'کیف و کفش', img: CatImg2, productCount: 4000 },
+  { id: 553, title: 'اکسسوری‌ها', img: CatImg1, productCount: 64000 },
 ];
 
 export default function BestCategories() {
   return (
     <section className="container mx-auto py-10">
       <h2 className="text-3xl font-bold text-center pb-10 mb-10">
-        دسته بندی های <span className="text-red-600">متنوع</span>
+        دسته‌بندی‌های <span className="text-red-600">متنوع</span>
       </h2>
-      <div className=" grid grid-cols-10 gap-10 items-center">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
         {list.map((item) => (
           <Link
-            href={'/'}
+            href={`/categories/${item.id}`}
             key={item.id}
-            className="col-span-2 flex items-center gap- bg-white rounded-xl p-5 space-y-2 hover:scale-105 duration-300 transition-transform border-2 border-gray-100 shadow-xl group"
+            className="flex items-center gap-3 bg-white rounded-xl p-5 hover:scale-105 duration-300 transition-transform border border-gray-100 shadow-md group"
           >
             <Image
               src={item.img}
-              alt={item.alt}
-              className="rounded-xl"
-              width={80}
+              alt={item.title}
+              className="rounded-xl shrink-0"
+              width={70}
+              height={70}
             />
-            <div className="space-y-2">
-              <h4 className="text-xl font-bold group-hover:text-[#c83b3b]">
+            <div className="space-y-1.5">
+              <h4 className="text-base font-bold group-hover:text-red-600 transition-colors">
                 {item.title}
               </h4>
-              <div className="flex gap-2">
-                <span className="text-sm text-gray-500">
+              <div className="flex items-center gap-1">
+                <span className="text-xs text-gray-500">
                   {toNumberFa(item.productCount)} محصول
                 </span>
-                <FiArrowLeft size={18} className="text-gray-500" />
+                <FiArrowLeft size={14} className="text-gray-400" />
               </div>
             </div>
           </Link>

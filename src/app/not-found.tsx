@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import image404 from '@/assets/images/404.png';
+import image404 from '@/public/images/404.png';
 import PageRouter from '../components/PageRouter/PageRouter';
 import { IPageRouterDto } from '../types/IPageRouterDto';
 export default function NotFound() {

@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { IProductDto } from '@/src/types/IProductDto';
-import { setProductOffer } from '@/src/utility/setProductOffer';
-import { toNumberFa } from '@/src/utility/toNumberFa';
-import TomanSvg from '@/assets/svg/toman.svg';
+import { setProductOffer } from '@/src/utils/setProductOffer';
+import { toNumberFa } from '@/src/utils/toNumberFa';
+import TomanSvg from '@/public/svg/toman.svg';
+import { FiShoppingCart } from 'react-icons/fi';
+import { title } from 'process';
 
 export default function ProductCart({
   name,
@@ -14,48 +16,63 @@ export default function ProductCart({
   is_offer,
   category,
 }: IProductDto) {
+  const finalPrice = is_offer
+    ? setProductOffer(price, offer_percent as number)
+    : price;
+
   return (
     <Link
       href={`/store/${slug}`}
-      className="col-span-1 relative bg-white rounded-lg p-5 space-y-3 border-2 items-center border-gray-200 text-center transition-all duration-300  hover:-translate-y-1 hover:border-[#c83b3b] group"
+      title={title}
+      className="group relative flex flex-col bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
     >
-      <div className="relative">
-        {is_offer && (
-          <span className="absolute top-1 left-1 bg-[#c83b3b] text-white rounded-lg py-0.5 px-1.5 items-center">
-            %{toNumberFa(offer_percent as number, false)}
+      <div className="relative bg-gray-50 overflow-hidden aspect-square">
+        {is_offer && offer_percent && (
+          <span className="absolute top-3 right-3 z-10 bg-[#c83b3b] text-white text-xs font-bold rounded-full px-2.5 py-1 shadow-md">
+            {toNumberFa(offer_percent, false)}٪
           </span>
         )}
         <Image
-          className={'rounded-lg mx-auto'}
           src={images[0]}
           alt={name}
-          width={270}
-          height={250}
-          quality={100}
+          width={300}
+          height={300}
+          quality={90}
+          className="rounded-2xl transition-transform duration-500 group-hover:scale-105"
         />
       </div>
-      <h3 className={'text-lg'}>{name}</h3>
-      <span className="text-gray-400">{category.name}</span>
-      <div>
-        {is_offer ? (
-          <div className="text-lg font-bold flex gap-1 items-center justify-center">
-            <span className="text-sm line-through text-gray-400 px-2">
-              {toNumberFa(price)}
+
+      <div className="flex flex-col flex-1 p-4 gap-2 text-right">
+        <span className="text-xs text-[#c83b3b] bg-red-50 rounded-full px-2 py-0.5 w-fit self-end font-medium">
+          {category.name}
+        </span>
+
+        <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 leading-6">
+          {name}
+        </h3>
+
+        <div className="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between">
+          <div className="flex flex-col items-end">
+            {is_offer && (
+              <span className="text-xs line-through text-gray-400 mb-0.5">
+                {toNumberFa(price)}
+              </span>
+            )}
+            <span className="flex items-center gap-1 text-base font-bold text-gray-900">
+              {toNumberFa(finalPrice)}
+              <Image src={TomanSvg} alt="تومان" width={15} height={15} />
             </span>
-            {toNumberFa(setProductOffer(price, offer_percent as number))}{' '}
-            <Image src={TomanSvg} alt="logo" width={18} />
           </div>
-        ) : (
-          <span className="text-md flex gap-2 justify-center">
-            {toNumberFa(price)}
-            <Image src={TomanSvg} alt="logo" width={16} />
-          </span>
-        )}
+
+          <button
+            // onClick={(e) => e.preventDefault()}
+            className="flex items-center gap-1.5 bg-[#c83b3b] hover:bg-[#a82f2f] text-white text-xs font-medium px-3 py-2 rounded-xl transition-colors duration-200"
+          >
+            <FiShoppingCart size={14} />
+            افزودن
+          </button>
+        </div>
       </div>
-      {/* <button className="absolute left-0 right-0 mx-auto text-sm font-light  text-white bg-[#c83b3b] rounded-t-2xl w-3/4 py-2  bottom-0 hidden group-hover:flex justify-center gap-2 itmes-center">
-        افزودن به سبد 
-        <FiShoppingCart size={20} />
-      </button> */}
     </Link>
   );
 }

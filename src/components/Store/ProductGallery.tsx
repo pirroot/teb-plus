@@ -12,31 +12,36 @@ export default function ProductGallery({
   const [active, setActive] = useState<string>(images[0]);
 
   return (
-    <div className="w-[400] h-auto flex gap-10">
-      <div className="grid w-1/4 gap-5">
+    <div className="flex gap-4 h-full">
+      {/* Thumbnails column */}
+      <div className="flex flex-col gap-3 w-16 shrink-0">
         {images.map((img, i) => (
-          <Image
+          <button
             key={i}
-            src={img}
-            alt={alt_title}
             onClick={() => setActive(img)}
-            width={70}
-            height={70}
-            className={`rounded-md cursor-pointer ${
-              active === img
-                ? 'border-2 border-[#c83b3b]'
-                : 'border border-[#ccc]'
-            }`}
-          />
+            className={`relative w-16 h-16 rounded-xl overflow-hidden border-2 transition-all duration-200 shrink-0 ${active === img
+              ? 'border-[#c83b3b] shadow-md scale-105'
+              : 'border-gray-200 hover:border-gray-400'
+              }`}
+          >
+            <Image
+              src={img}
+              alt={`${alt_title} - ${i + 1}`}
+              fill
+              className="object-contain p-1"
+            />
+          </button>
         ))}
       </div>
-      <div className=" w-3/4 items-center">
+
+      {/* Main image */}
+      <div className="flex-1 relative rounded-2xl overflow-hidden bg-gray-50 border border-gray-100 min-h-[360]">
         <Image
           src={active}
           alt={alt_title}
-          width={400}
-          height={200}
-          className="rounded-md h-auto w-full"
+          fill
+          quality={100}
+          className="object-contain p-6 transition-opacity duration-300 rounded-2xl"
         />
       </div>
     </div>

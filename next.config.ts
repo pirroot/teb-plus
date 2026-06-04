@@ -11,6 +11,11 @@ const nextConfig: NextConfig = {
     qualities: [75, 100],
     unoptimized: true,
   },
+  // experimental: {
+  //   staleTimes: {
+  //     dynamic: 10,
+  //   },
+  // },
 };
 
 export default nextConfig;

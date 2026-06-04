@@ -1,52 +1,65 @@
 import Image from 'next/image';
 import { IProductDto } from '@/src/types/IProductDto';
-import { setProductOffer } from '@/src/utility/setProductOffer';
-import { toNumberFa } from '@/src/utility/toNumberFa';
-import TomanSvg from '@/assets/svg/toman.svg';
+import { setProductOffer } from '@/src/utils/setProductOffer';
+import { toNumberFa } from '@/src/utils/toNumberFa';
+import TomanSvg from '@/public/svg/toman.svg';
 
 export default function OfferCart({
-  main_image,
+  images,
   name,
   price,
   offer_percent,
   is_offer,
   category,
 }: IProductDto) {
+  const discountedPrice = setProductOffer(price, offer_percent as number);
+
   return (
-    <div className="embla_slide_offers bg-white rounded-md p-2 space-y-2">
+    <div className="bg-white rounded-xl p-3 space-y-2 h-full flex flex-col">
+      {/* Image + badge */}
       <div className="relative">
-        {is_offer && (
-          <span className="absolute top-2 left-4 bg-red-700 text-white rounded-xl p-1 px-1.5 items-center ">
-            {toNumberFa(offer_percent as number, false)}%
+        {is_offer && offer_percent && (
+          <span className="absolute top-2 right-2 z-10 bg-[#c83b3b] text-white text-xs font-bold rounded-full px-2 py-0.5">
+            {toNumberFa(offer_percent, false)}٪
           </span>
         )}
         <Image
-          className={'rounded-md mx-auto'}
-          src={main_image}
+          src={images[0]}
           alt={name}
-          width={270}
-          height={250}
-          quality={100}
+          width={260}
+          height={240}
+          quality={90}
+          className="rounded-lg mx-auto object-cover w-full aspect-square"
         />
       </div>
-      <h3 className={'text-xl'}>{name}</h3>
-      <span>{category.name}</span>
-      {is_offer ? (
-        <div className="flex items-center justify-end">
-          <span className="text-sm line-through text-gray-500 px-2">
+
+      {/* Name */}
+      <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 text-right">
+        {name}
+      </h3>
+
+      {/* Category */}
+      <span className="text-xs text-gray-400 text-right">{category.name}</span>
+
+      {/* Price — pushes to bottom */}
+      <div className="mt-auto pt-2 flex flex-col items-end gap-0.5">
+        {is_offer ? (
+          <>
+            <span className="text-xs line-through text-gray-400">
+              {toNumberFa(price)}
+            </span>
+            <span className="text-base font-bold text-[#c83b3b] flex items-center gap-1">
+              {toNumberFa(discountedPrice)}
+              <Image src={TomanSvg} alt="تومان" width={16} height={16} />
+            </span>
+          </>
+        ) : (
+          <span className="text-base font-semibold text-gray-800 flex items-center gap-1">
             {toNumberFa(price)}
+            <Image src={TomanSvg} alt="تومان" width={16} height={16} />
           </span>
-          <span className="text-lg font-bold flex gap-1">
-            {toNumberFa(setProductOffer(price, offer_percent as number))}{' '}
-            <Image src={TomanSvg} alt="logo" width={18} />
-          </span>
-        </div>
-      ) : (
-        <span className="text-md flex gap-2">
-          {toNumberFa(price)}
-          <Image src={TomanSvg} alt="logo" width={44} />
-        </span>
-      )}
+        )}
+      </div>
     </div>
   );
 }

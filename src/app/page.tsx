@@ -1,5 +1,4 @@
 import OfferCategories from '../components/Home/offers/OfferCategories';
-import Slider from '../components/Home/Slider';
 import StoryBar from '../components/Home/StoryBar';
 import TopCategories from '../components/Home/TopCategories';
 import BestSellers from '../components/Home/BestSellers';
@@ -9,10 +8,12 @@ import Brands from '../components/Home/Brands';
 import HomeArticles from '../components/Home/HomeArticles';
 import Offers from '../components/Home/offers/Offers';
 import OrderTracking from '../components/Home/OrderTracking';
+import Slider from '../components/Home/Slliders/Slider';
+import ProductOrderTracking from '../components/Store/ProductDitail/ProductOrderTracking';
 
 export default function Home() {
   return (
-    <>
+    <main className='max-md:px-4'>
       <StoryBar />
       <Slider />
       <Offers />
@@ -23,7 +24,7 @@ export default function Home() {
       <NewProducts />
       <Brands />
       <HomeArticles />
-      <OrderTracking />
-    </>
+      <ProductOrderTracking />
+    </main>
   );
 }

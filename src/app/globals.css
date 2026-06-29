@@ -1,4 +1,9 @@
 @import 'tailwindcss';
+@layer utilities {
+  .border-gradient-to-b {
+    border-image: linear-gradient(to bottom, #8b5cf6, #ec4899) 1;
+  }
+}
 
 :root {
   --bg: #ffffff;

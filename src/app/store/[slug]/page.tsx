@@ -38,13 +38,13 @@ export default async function ProductDetail(props: {
       <div className="container mx-auto px-4 py-8 space-y-8">
         <div className="grid grid-cols-12 gap-6">
 
-          <div className="col-span-8 bg-white rounded-2xl shadow-sm border border-gray-100 p-6 space-y-8">
+          <div className="col-span-8 max-sm:col-span-12 bg-white rounded-2xl shadow-sm border border-gray-100 p-6 space-y-8">
             <div className="grid grid-cols-5 gap-8">
-              <div className="col-span-2">
+              <div className="col-span-2 max-lg:col-span-5">
                 <ProductGallery images={product.images} alt_title={product.name} />
               </div>
 
-              <div className="col-span-3 flex flex-col gap-5 text-right">
+              <div className="col-span-3 max-lg:col-span-5 flex flex-col gap-5 text-right">
                 <div>
                   <h1 className="text-xl font-bold text-gray-900 leading-8">
                     {product.name}
@@ -92,7 +92,7 @@ export default async function ProductDetail(props: {
             </div>
           </div>
 
-          <div className="col-span-4 flex flex-col gap-4">
+          <div className="col-span-4 max-sm:col-span-12 flex flex-col gap-4">
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 space-y-4 text-right">
               <MetaRow icon={<FiHash size={15} />} label="شناسه محصول" value={product.id_product} />
               <MetaRow icon={<FiTag size={15} />} label="دسته‌بندی" value={product.category.name} />

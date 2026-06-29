@@ -5,8 +5,8 @@ import Footer from '../components/Footer/Footer';
 import raviFont from '../utils/font/font';
 
 export const metadata: Metadata = {
-  title: 'لباسینو',
-  description: 'سایت فروشگاهی لباس - سایت لباسینو',
+  title: 'لباسینو | فروشگاه آنلاین لباس',
+  description: 'مرجع تخصصی خرید لباس‌های برندهای خلاق ایرانی',
 };
 
 export default function RootLayout({
@@ -15,12 +15,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" dir="rtl" className={`scroll-smooth ${raviFont.variable}`}>
-      <body className='bg-gray-50'>
+    <html lang="fa" dir="rtl" className={`scroll-smooth ${raviFont.variable}`}>
+      <body className='bg-linear-to-b from-gray-50 to-white min-h-screen'>
         <Header />
-        {children}
+        <main className="min-h-screen">
+          {children}
+        </main>
         <Footer />
       </body>
-    </html >
+    </html>
   );
 }

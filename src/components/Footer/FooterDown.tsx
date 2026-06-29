@@ -16,10 +16,10 @@ const socials = [
 
 export default function FooterDown() {
   return (
-    <div className="flex justify-between gap-5 items-center flex-wrap py-2">
-      <p className="flex items-center gap-2 text-sm text-gray-600">
+    <div className="flex md:justify-between sm:justify-center gap-5 items-center flex-wrap py-2">
+      <p className="flex items-center gap-2 text-sm text-gray-600 font-bold">
         <FiHash size={22} />
-        تمام حقوق مادی و معنوی برای فروشگاه لباسینو محفوظ بوده و هرگونه کپی‌برداری پیگرد قانونی دارد.
+        تمام حقوق مادی و معنوی برای فروشگاه<span className='text-red-600'>تاپ پلاس</span>محفوظ بوده.
       </p>
       <div className="flex gap-3">
         {socials.map(({ icon: Icon, href, label }) => (

@@ -7,7 +7,6 @@ import NewProducts from '../components/Home/NewProducts';
 import Brands from '../components/Home/Brands';
 import HomeArticles from '../components/Home/HomeArticles';
 import Offers from '../components/Home/offers/Offers';
-import OrderTracking from '../components/Home/OrderTracking';
 import Slider from '../components/Home/Slliders/Slider';
 import ProductOrderTracking from '../components/Store/ProductDitail/ProductOrderTracking';
 

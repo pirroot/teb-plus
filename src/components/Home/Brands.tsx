@@ -62,6 +62,7 @@ export default function Brands() {
         <div className="col-span-3 grid grid-cols-6 max-md:grid-cols-4 max-sm:grid-cols-2 justify-between gap-5">
           {brands.map((brand, index) => (
             <Link
+              key={index}
               href={brand.url}
               className="shadow-2xl rounded-3xl p-3 border-2 border-gray-200 hover:-translate-1 duration-500 transition-transform"
             >

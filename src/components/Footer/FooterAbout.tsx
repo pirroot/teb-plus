@@ -7,7 +7,7 @@ export default function FooterAbout() {
   return (
     <div className="col-span-5 space-y-4">
       <Image src={Logo} alt="لوگو لباسینو" width={200} />
-      <p className="text-justify text-sm leading-7 text-gray-300">
+      <p className="text-justify text-sm leading-7 text-gray-300 ">
         لباسینو، مرجع تخصصی خرید لباس‌های برندهای خلاق ایرانی، جایی است که هنر و مد به هم
         می‌رسند. این فروشگاه با ارائه محصولات برندهای داخلی، فرصتی برای کشف استایل‌های
         منحصربه‌فرد و همراهی با ترندهای روز دنیا ایجاد کرده است. از لباس‌های روزمره تا
